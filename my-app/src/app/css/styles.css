@@ -1,0 +1,6 @@
+html {
+  background: url(1.png) no-repeat center center fixed;
+  background-size: cover;
+  transition: 1000ms opacity ease-in-out;
+  transition-delay: 1000ms;
+}/*# sourceMappingURL=styles.css.map */

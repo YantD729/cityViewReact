@@ -1,0 +1,59 @@
+.imageBox {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  height: 150px;
+  margin-right: 2%;
+  margin-left: 2%;
+  justify-content: space-between;
+}
+.imageBox .slides {
+  overflow: hidden;
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: calc(100% - 10vw);
+  left: 5vw;
+  right: 5vw;
+}
+.imageBox .slides .slide {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  margin-right: 0.2vw;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+.imageBox .slides .slide img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5%;
+}
+.imageBox .slides .slide img:hover {
+  cursor: pointer;
+  opacity: 75%;
+}
+.imageBox .slides .slide.active {
+  opacity: 50%;
+}
+.imageBox .prev-btn,
+.imageBox .next-btn {
+  position: absolute;
+  background: transparent;
+  color: #ffffff;
+  opacity: 75%;
+  cursor: pointer;
+  font-size: 4rem;
+  height: 100%;
+  width: 5vw;
+  border: 0px;
+  outline: 0px;
+}
+.imageBox .prev-btn:active,
+.imageBox .next-btn:active {
+  background-color: #ffffff;
+}
+.imageBox .next-btn {
+  right: 0px;
+}/*# sourceMappingURL=Carousel.css.map */
