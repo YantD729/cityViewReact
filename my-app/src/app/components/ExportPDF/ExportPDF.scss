@@ -1,0 +1,35 @@
+.exportImageBox {
+    flex-direction: column; 
+    margin-top: 7vh;
+    display: flex;
+    margin: 5% 2%;
+    justify-content: center;
+    gap: 2%; 
+    .slides {
+        overflow: hidden;
+        display: flex;
+        height: 150px;
+        width: 100%; // 让slides占满整个宽度
+        gap: 2%; 
+        img {
+            flex: 1;
+            // max-height: 150px; 
+            // height: 100%;
+            // width: auto; 
+            object-fit: contain; 
+            border-radius: 5%;
+            margin-right: 0.2vw;
+            transition: 200ms opacity ease-in-out;
+            transition-delay: 200ms;
+            &:hover {
+                cursor: pointer;
+                opacity: 75%;
+            }
+        }
+    }
+    button {
+        align-self: center;
+        width: 20%;
+        margin-top: 10px;
+    }
+}
