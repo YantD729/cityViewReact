@@ -54,13 +54,14 @@ function Carousel({ searchValue }) {
   }
 
   return (
-    <div className='imageBox'>
-         <button 
-          className="carousel-control-prev" 
-          onClick={() => handlePageChange(currPageIndex > 1 ? currPageIndex - 1 : maxPageNum.current)}
-         >
-          {/* &lt; */}
-         </button>
+    <div className='carousel justify-center items-center'>
+       <div className='imageBox'>
+        <button className="prevBtn inline-flex items-center px-2 py-1.5 bg-opacity-0" 
+          onClick={() => handlePageChange(currPageIndex > 1 ? currPageIndex - 1 : maxPageNum.current)}>
+          <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 10 16">
+              <path d="M8.766.566A2 2 0 0 0 6.586 1L1 6.586a2 2 0 0 0 0 2.828L6.586 15A2 2 0 0 0 10 13.586V2.414A2 2 0 0 0 8.766.566Z"/>
+          </svg>
+        </button>
          <div className="slides">
             {picData?.map((pic, index) => (
                 <div
@@ -75,12 +76,24 @@ function Carousel({ searchValue }) {
             ))}
         </div>
         <button 
-          className="next-btn" 
+          className="nextBtn inline-flex items-center px-2 py-1.5 bg-opacity-0" 
           onClick={() => handlePageChange(currPageIndex < maxPageNum.current ? currPageIndex + 1 : 1)}
           >
-          &gt;
+          <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 10 16">
+            <path d="M3.414 1A2 2 0 0 0 0 2.414v11.172A2 2 0 0 0 3.414 15L9 9.414a2 2 0 0 0 0-2.828L3.414 1Z"/>
+          </svg>
         </button>
-    </div>
+        
+      </div>
+      <div className='numberKeys inline-flex items-center justify-center'>
+      {Array.from({ length: 10 }, (_, i) => (
+        <kbd key={i} className="px-2 py-1.5 text-xs text-gray-800 bg-opacity-0">
+          {i  + 1}
+        </kbd>
+      ))} 
+      </div>
+  </div>
+   
   )
 }
 

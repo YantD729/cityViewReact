@@ -9,44 +9,31 @@ $placeholder-text: "input city name...";
 }
 
 form {
+    position: relative;
     display: flex;
     justify-content:center;
 }
 
 .searchingBar {
-  button {
+  align-items: flex-start;
+  display: flex;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  .searchingBox {
     @include basicFont;
-    margin: 20vh auto 20vh 0;
-    opacity: 75%;
-    height: 30px;
-    background-color: #c1c1c1;
-    border: 1px solid #575757;
-    color: #080202;
-    border-radius: 40px;
-    cursor: pointer;
-    font-size: 16px;
-    display: block;
-    &:hover {
-      font-weight: 500;
-      opacity: 1;
-    }
-  }
-}
-
-.searchingBox {
-    @include basicFont;
+    position: absolute;
+    top: 0;
     display: flex;
     flex-direction: column;
     position: relative;
     justify-content: flex-start;
     align-items: center;
     width: 40vw;
-    margin: 20vh 2vw 20vh auto;
     input[type="text"] {
       @include basicFont;
       border: 1px solid #ccc;
       border-radius: 4px;
-      font-size: 16px;
+      font-size: 14px;
       width: 100%;
       margin: 0; 
     }
@@ -57,7 +44,6 @@ form {
       background-color: white;
       border: 1px solid #ccc;
       width: 100%;
-      max-height: 150px;
       overflow: auto;
       li {
         cursor: pointer;
@@ -67,7 +53,11 @@ form {
         }
       }
     }
+  }
+  button {
+    @include basicFont;
+    margin-left: 0.5vw;
+    margin-top: 0.5vh;
+  }
 }
-  
-  
-  
+

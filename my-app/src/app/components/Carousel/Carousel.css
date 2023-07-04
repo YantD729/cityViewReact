@@ -1,4 +1,5 @@
-.imageBox {
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500&display=swap");
+.carousel .imageBox {
   position: relative;
   overflow: hidden;
   display: flex;
@@ -7,7 +8,7 @@
   margin-left: 2%;
   justify-content: space-between;
 }
-.imageBox .slides {
+.carousel .imageBox .slides {
   overflow: hidden;
   display: flex;
   position: absolute;
@@ -16,7 +17,7 @@
   left: 5vw;
   right: 5vw;
 }
-.imageBox .slides .slide {
+.carousel .imageBox .slides .slide {
   width: 100%;
   display: flex;
   flex: 1;
@@ -24,37 +25,32 @@
   transition: 200ms opacity ease-in-out;
   transition-delay: 200ms;
 }
-.imageBox .slides .slide img {
+.carousel .imageBox .slides .slide img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5%;
 }
-.imageBox .slides .slide img:hover {
+.carousel .imageBox .slides .slide img:hover {
   cursor: pointer;
   opacity: 75%;
 }
-.imageBox .slides .slide.active {
+.carousel .imageBox .slides .slide.active {
   opacity: 50%;
 }
-.imageBox .prev-btn,
-.imageBox .next-btn {
+.carousel .imageBox .prevBtn,
+.carousel .imageBox .nextBtn {
   display: flex;
-  position: absolute;
-  background: transparent;
-  color: #ffffff;
-  opacity: 75%;
-  cursor: pointer;
-  font-size: 4rem;
-  height: 150px;
   width: 5vw;
-  border: 0px;
-  outline: 0px;
 }
-.imageBox .prev-btn:active,
-.imageBox .next-btn:active {
-  background-color: #ffffff;
+.carousel .imageBox .prevBtn:hover,
+.carousel .imageBox .nextBtn:hover {
+  color: aqua;
 }
-.imageBox .next-btn {
+.carousel .imageBox .nextBtn {
   right: 0px;
+}
+.carousel .numberKeys {
+  display: flex;
+  position: relative;
 }/*# sourceMappingURL=Carousel.css.map */

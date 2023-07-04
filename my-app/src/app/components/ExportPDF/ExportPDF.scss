@@ -36,15 +36,8 @@ $placeholder-text: "input city name...";
             }
         }
     }
-    .buttonBox {
-        height: 5vh;
-        width: 100%;
-        text-align: center;
-        button {
-            @include basicFont();
-            margin-right: 2vw;
-            width: 20%;
-        }
+    button {
+        @include basicFont;
+        margin: 2vw;
     }
-    
 }

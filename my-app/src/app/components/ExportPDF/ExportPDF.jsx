@@ -2,7 +2,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { removeImage, resetImages } from '../../../../slices/imageSlice'
-import Button from 'react-bootstrap/Button';
 import jsPDF from 'jspdf'
 import './ExportPDF.css'
 
@@ -44,18 +43,18 @@ function ExportPDF () {
     }
 
     return (
-        <div className='exportImageBox'>
+        <div className='exportImageBox bg-teal-100 bg-opacity-25 rounded-[8px] '>
 
-            <div className='buttonBox'>
-                <Button variant="success">Success</Button>{' '}
-                <button 
-                    className=''
+            <div >
+                <button className="group relative overflow-hidden rounded-lg bg-white text-base shadow px-[15px] py-[4px]"
                     onClick={exportImages}>
-                    Export PDF
+                    <div className="absolute inset-0 w-3 bg-teal-200 transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+                    <span className="relative text-black group-hover:text-white">Export PDF</span>
                 </button>
-                <button onClick={handleResetImages}>
+                <button class="bg-orange-100 hover:bg-orange-200 transition-colors rounded-[8px] px-[15px] py-[4px] text-white"
+                    onClick={handleResetImages}>
                     Reset Images
-                </button>
+                </button> 
             </div>
              
             <div className='slides'>

@@ -1,62 +1,56 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500&display=swap");
 form {
+  position: relative;
   display: flex;
   justify-content: center;
 }
 
-.searchingBar button {
+.searchingBar {
+  align-items: flex-start;
+  display: flex;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+.searchingBar .searchingBox {
   font-family: "Roboto Mono", monospace;
   font-weight: 300;
-  margin: 20vh auto 20vh 0;
-  opacity: 75%;
-  height: 30px;
-  background-color: #c1c1c1;
-  border: 1px solid #575757;
-  color: #080202;
-  border-radius: 40px;
-  cursor: pointer;
-  font-size: 16px;
-  display: block;
-}
-.searchingBar button:hover {
-  font-weight: 500;
-  opacity: 1;
-}
-
-.searchingBox {
-  font-family: "Roboto Mono", monospace;
-  font-weight: 300;
+  position: absolute;
+  top: 0;
   display: flex;
   flex-direction: column;
   position: relative;
   justify-content: flex-start;
   align-items: center;
   width: 40vw;
-  margin: 20vh 2vw 20vh auto;
 }
-.searchingBox input[type=text] {
+.searchingBar .searchingBox input[type=text] {
   font-family: "Roboto Mono", monospace;
   font-weight: 300;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 14px;
   width: 100%;
   margin: 0;
 }
-.searchingBox .searchHistory {
+.searchingBar .searchingBox .searchHistory {
   font-family: "Roboto Mono", monospace;
   font-weight: 300;
   padding-left: 0;
   background-color: white;
   border: 1px solid #ccc;
   width: 100%;
-  max-height: 150px;
   overflow: auto;
 }
-.searchingBox .searchHistory li {
+.searchingBar .searchingBox .searchHistory li {
   cursor: pointer;
   list-style-type: none;
 }
-.searchingBox .searchHistory li:hover {
+.searchingBar .searchingBox .searchHistory li:hover {
   background-color: #eee;
+}
+.searchingBar button {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+  margin-left: 0.5vw;
+  margin-top: 0.5vh;
 }/*# sourceMappingURL=SearchBar.css.map */
