@@ -4,6 +4,25 @@ form {
   justify-content: center;
 }
 
+.searchingBar button {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+  margin: 20vh auto 20vh 0;
+  opacity: 75%;
+  height: 30px;
+  background-color: #c1c1c1;
+  border: 1px solid #575757;
+  color: #080202;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+}
+.searchingBar button:hover {
+  font-weight: 500;
+  opacity: 1;
+}
+
 .searchingBox {
   font-family: "Roboto Mono", monospace;
   font-weight: 300;
@@ -40,23 +59,4 @@ form {
 }
 .searchingBox .searchHistory li:hover {
   background-color: #eee;
-}
-
-button {
-  font-family: "Roboto Mono", monospace;
-  font-weight: 300;
-  margin: 20vh auto 20vh 0;
-  opacity: 75%;
-  height: 30px;
-  background-color: #c1c1c1;
-  border: 1px solid #575757;
-  color: #080202;
-  border-radius: 40px;
-  cursor: pointer;
-  font-size: 16px;
-  display: block;
-}
-button:hover {
-  font-weight: 500;
-  opacity: 1;
 }/*# sourceMappingURL=SearchBar.css.map */

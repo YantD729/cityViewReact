@@ -25,7 +25,6 @@ function Carousel({ searchValue }) {
       document.documentElement.style.backgroundImage = `url(${backgroundImgUrl})`
     }
   }, [activeIndex, picData])
-  
 
   useEffect(() => {
     console.log('Carousel received searchValue: ', searchValue)
@@ -57,10 +56,10 @@ function Carousel({ searchValue }) {
   return (
     <div className='imageBox'>
          <button 
-          className="prev-btn" 
+          className="carousel-control-prev" 
           onClick={() => handlePageChange(currPageIndex > 1 ? currPageIndex - 1 : maxPageNum.current)}
          >
-          &lt;
+          {/* &lt; */}
          </button>
          <div className="slides">
             {picData?.map((pic, index) => (

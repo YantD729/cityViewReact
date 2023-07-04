@@ -13,6 +13,26 @@ form {
     justify-content:center;
 }
 
+.searchingBar {
+  button {
+    @include basicFont;
+    margin: 20vh auto 20vh 0;
+    opacity: 75%;
+    height: 30px;
+    background-color: #c1c1c1;
+    border: 1px solid #575757;
+    color: #080202;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    &:hover {
+      font-weight: 500;
+      opacity: 1;
+    }
+  }
+}
+
 .searchingBox {
     @include basicFont;
     display: flex;
@@ -49,21 +69,5 @@ form {
     }
 }
   
-  button {
-    @include basicFont;
-    margin: 20vh auto 20vh 0;
-    opacity: 75%;
-    height: 30px;
-    background-color: #c1c1c1;
-    border: 1px solid #575757;
-    color: #080202;
-    border-radius: 40px;
-    cursor: pointer;
-    font-size: 16px;
-    display: block;
-    &:hover {
-      font-weight: 500;
-      opacity: 1;
-    }
-}
+  
   

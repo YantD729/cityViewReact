@@ -1,20 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500&display=swap");
 .exportImageBox {
+  display: flex;
   flex-direction: column;
   margin-top: 7vh;
-  display: flex;
   margin: 5% 2%;
-  justify-content: center;
   gap: 2%;
+  align-items: center;
 }
 .exportImageBox .slides {
-  overflow: hidden;
   display: flex;
+  flex-wrap: wrap;
   height: 150px;
   width: 100%;
-  gap: 2%;
+  height: 150px;
 }
 .exportImageBox .slides img {
-  flex: 1;
+  width: auto;
+  flex: 1 1 auto;
+  max-height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   border-radius: 5%;
@@ -26,8 +29,14 @@
   cursor: pointer;
   opacity: 75%;
 }
-.exportImageBox button {
-  align-self: center;
+.exportImageBox .buttonBox {
+  height: 5vh;
+  width: 100%;
+  text-align: center;
+}
+.exportImageBox .buttonBox button {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+  margin-right: 2vw;
   width: 20%;
-  margin-top: 10px;
 }/*# sourceMappingURL=ExportPDF.css.map */

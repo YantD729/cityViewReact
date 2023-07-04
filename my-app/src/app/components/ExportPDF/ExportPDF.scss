@@ -1,21 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500&display=swap');
+
+$font-family: 'Roboto Mono', monospace;
+$placeholder-text: "input city name...";
+
+@mixin basicFont {
+    font-family: $font-family;
+    font-weight: 300;
+}
+
 .exportImageBox {
-    flex-direction: column; 
-    margin-top: 7vh;
     display: flex;
+    flex-direction: column;  
+    margin-top: 7vh;
     margin: 5% 2%;
-    justify-content: center;
     gap: 2%; 
+    align-items: center;
     .slides {
-        overflow: hidden;
         display: flex;
+        flex-wrap: wrap; 
         height: 150px;
-        width: 100%; // 让slides占满整个宽度
-        gap: 2%; 
+        width: 100%; 
+        height: 150px;
         img {
-            flex: 1;
-            // max-height: 150px; 
-            // height: 100%;
-            // width: auto; 
+            width: auto;
+            flex: 1 1 auto; 
+            max-height: 100%;  
             object-fit: contain; 
             border-radius: 5%;
             margin-right: 0.2vw;
@@ -27,9 +36,15 @@
             }
         }
     }
-    button {
-        align-self: center;
-        width: 20%;
-        margin-top: 10px;
+    .buttonBox {
+        height: 5vh;
+        width: 100%;
+        text-align: center;
+        button {
+            @include basicFont();
+            margin-right: 2vw;
+            width: 20%;
+        }
     }
+    
 }

@@ -45,7 +45,7 @@ const SearchBar = ({ onSearch }) => {
 
   
   return (
-    <form onSubmit={handleSubmit}>
+    <form className='searchingBar' onSubmit={handleSubmit}>
       <div className='searchingBox'>
         <input 
           type="text" 
